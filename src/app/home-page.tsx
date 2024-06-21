@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Film } from "./film.interface";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import "./home-page.scss"; 
 
 export function HomePage() {
   const [films, setFilms] = useState<Film[]>([]);
@@ -25,7 +26,7 @@ export function HomePage() {
           className="film-item"
           onClick={() => handleNavigate(film.id)}
         >
-          <img src={film.image} />
+          <img src={film.image} alt={film.title} />
           <p>{film.title}</p>
         </div>
       ))}
@@ -34,3 +35,4 @@ export function HomePage() {
 }
 
 export default HomePage;
+

@@ -1,14 +1,18 @@
 import "./main-app.scss";
 import { Outlet } from "react-router-dom";
+import logo from "../assets/logoo.png";
 
 export function MainApp() {
   return (
-    <div>
+    <div className="MainAppWrapper">
       <header className="app-header">
-        Welcome to Ghibli Film Shops
-        <small>The Best Film Ever</small>
+        <img src={logo} alt="Ghibli Film Shops Logo" className="app-logo" />
+        <div>
+          Welcome to Ghibli Film Shops
+          <br></br>
+      <small>The Best Film Ever</small>
+        </div>
       </header>
-      
       <Outlet />
     </div>
   );

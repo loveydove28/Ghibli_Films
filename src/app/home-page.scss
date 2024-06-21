@@ -1,0 +1,71 @@
+/* Import the Merriweather and Open Sans fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5%;
+  text-align: center;
+  padding: 20px;
+  background: url('../assets/two.jfif') no-repeat center center fixed; /* Corrected path */
+  background-size: cover; /* Ensure the image covers the entire container */
+  font-family: 'Open Sans', sans-serif; /* Use Open Sans for body text */
+}
+
+.film-item {
+  background-color: #ffffff; /* Pure white background for minimalism */
+  border: 1px solid #dcdcdc; /* Slightly darker border for contrast */
+  border-radius: 12px; /* Larger border radius for a modern look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  margin: 15px; /* Increased margin for better spacing */
+  padding: 20px; /* Increased padding for more content space */
+  text-align: center;
+  width: 220px; 
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+  }
+
+  img {
+    border-radius: 8px;
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+    margin-bottom: 15px; /* Increased margin below the image */
+  }
+
+  p {
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 10px 0 5px;
+  }
+
+  .price {
+    color: #555; /* Slightly darker color for better readability */
+    font-size: 1rem; /* Increased font size */
+  }
+}
+
+/* Media queries for better responsiveness */
+@media (max-width: 1024px) {
+  .film-item {
+    width: 300px; /* Adjust width for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .film-item {
+    width: 250px; /* Adjust width for smaller tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .film-item {
+    width: calc(100% - 30px); /* Full width minus margins for phones */
+  }
+}

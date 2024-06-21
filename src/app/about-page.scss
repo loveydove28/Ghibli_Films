@@ -1,0 +1,146 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+.AboutPageWrapper {
+  background: url('../assets/two.jfif') no-repeat center center fixed; /* Corrected path */
+  background-size: cover; /* Ensure the image covers the entire container */
+  font-family: 'Open Sans', sans-serif; /* Use Open Sans for body text */
+  padding: 40px 0;
+}
+
+.AboutPage {
+  text-align: center;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff; /* Pure white background for minimalism */
+  border-radius: 12px; /* Slightly larger border radius for a softer look */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05); /* Lighter shadow for a softer effect */
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Subtle hover effect */
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: none; /* Remove text-shadow for a cleaner look */
+    font-family: 'Merriweather', serif; /* Use Merriweather for headers */
+  }
+
+  .film-banner {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05); /* Lighter shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  h2, h3, h4, h5 {
+    font-family: 'Open Sans', sans-serif; /* Use Open Sans for subheaders */
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+
+  h3, h4, h5 {
+    font-size: 1rem;
+  }
+
+  button {
+    background-color: #ffb6c1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      background-color: #ff8a9e; /* Slightly darker pink for hover */
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      background-color: #ff6b7b; /* Even darker pink for active state */
+      transform: translateY(1px);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+/* Media queries for better responsiveness */
+@media (max-width: 1024px) {
+  .AboutPage {
+    padding: 15px;
+  }
+
+  .AboutPage h1 {
+    font-size: 2rem;
+  }
+
+  .AboutPage button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .AboutPage {
+    padding: 10px;
+  }
+
+  .AboutPage h1 {
+    font-size: 1.8rem;
+  }
+
+  .AboutPage p {
+    font-size: 0.9rem;
+  }
+
+  .AboutPage .film-banner {
+    max-width: 100%; /* Full width for smaller screens */
+  }
+
+  .AboutPage button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .AboutPage {
+    padding: 5px;
+  }
+
+  .AboutPage h1 {
+    font-size: 1.5rem;
+  }
+
+  .AboutPage p {
+    font-size: 0.8rem;
+  }
+
+  .AboutPage button {
+    padding: 4px 8px;
+    font-size: 0.7rem;
+  }
+}
